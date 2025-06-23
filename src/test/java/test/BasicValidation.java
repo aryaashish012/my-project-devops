@@ -41,4 +41,15 @@ public void passValidation() {
 	assertTrue(actualResult.equals(expectedResult), "Mismatch in the Password");
 	
 }
+@Test
+
+public void loginValidation() {
+	String expectedResult ="Log In";
+	String actualResult = driver.findElement(By.name("login")).getText();
+	
+	Reporter.log("Expected Result =" + expectedResult);
+	Reporter.log("Actual Result =" + actualResult);
+	assertTrue(actualResult.equals(expectedResult), "Mismatch in the login");
+	
+}
 }
